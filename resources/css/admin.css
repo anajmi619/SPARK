@@ -1,0 +1,94 @@
+/* Staff theme is scoped so the student experience keeps its own visual language. */
+.spark-admin {
+    --color-accent: #2563eb;
+    --color-accent-content: #1d4ed8;
+    --color-accent-foreground: #fff;
+    --admin-surface: #fff;
+    --admin-canvas: #f5f6f8;
+    --admin-line: #dde1e7;
+    --admin-muted: #596270;
+    --admin-text: #20252d;
+    background: var(--admin-canvas);
+    color: var(--admin-text);
+    letter-spacing: 0;
+}
+.dark .spark-admin {
+    --color-accent: #2563eb;
+    --color-accent-content: #93c5fd;
+    --color-accent-foreground: #fff;
+    --admin-surface: #222529;
+    --admin-canvas: #181a1e;
+    --admin-line: #3c4149;
+    --admin-muted: #b3bbc7;
+    --admin-text: #f1f3f6;
+}
+.spark-admin .admin-sidebar { width: 260px; background: #202328; padding: 24px 14px 16px; border-color: #353a41; }
+.admin-brand { display: flex; align-items: center; gap: 12px; padding: 0 10px 18px; color: #fff; }
+.admin-brand-mark { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 8px; background: #facc45; color: #202328; }
+.admin-brand strong { display: block; font-size: 23px; line-height: 1.2; }
+.admin-brand small { display: block; color: #b7c0cd; font-size: 12px; margin-top: 3px; }
+.spark-admin .admin-sidebar [data-flux-sidebar-item] { min-height: 44px; margin-block: 3px; border-radius: 6px; color: #c8cfd9; }
+.spark-admin .admin-sidebar [data-flux-sidebar-item]:hover { background: #30363f; color: #fff; }
+.spark-admin .admin-sidebar [data-flux-sidebar-item][data-current] { background: #2b4770; border-color: #426496; color: #fff; box-shadow: inset 3px 0 #79b4ff; }
+.spark-admin .admin-sidebar [data-content] { white-space: normal; overflow: visible; line-height: 1.35; }
+.spark-admin .admin-topbar { min-height: 72px; gap: 16px; padding: 14px 32px; border-bottom: 1px solid var(--admin-line); background: var(--admin-surface); }
+.admin-breadcrumb { display: flex; align-items: center; gap: 10px; min-width: 0; font-size: 13px; color: var(--admin-muted); }
+.admin-breadcrumb a { font-weight: 700; color: var(--admin-text); }
+.admin-breadcrumb span { overflow-wrap: anywhere; }
+.admin-role { align-items: center; padding: 5px 10px; border: 1px solid var(--admin-line); border-radius: 6px; font-size: 12px; font-weight: 600; color: var(--admin-muted); }
+.spark-admin .admin-main { min-width: 0; padding: 32px; }
+.spark-admin .admin-main > div { max-width: 1480px; margin-inline: auto; }
+.spark-admin .admin-main :is(h1, h2, h3) { letter-spacing: 0; }
+.spark-admin .admin-main [data-flux-heading]:is(h1, h2).text-xl { font-size: 25px; line-height: 1.3; font-weight: 700; }
+.spark-admin .admin-main [data-flux-subheading] { margin-top: 6px; color: var(--admin-muted); }
+.spark-admin .admin-main :is(input:not([type=checkbox],[type=radio],[type=hidden]), select, textarea) { border-radius: 6px; }
+.spark-admin .admin-main :is(input:not([type=checkbox],[type=radio],[type=hidden]), select) { min-height: 42px; }
+.spark-admin .admin-main :is(input, select, textarea):focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }
+.spark-admin .admin-main input[type=file]::file-selector-button { padding: 6px 12px; margin-right: 12px; background: var(--admin-canvas); border: 0; border-right: 1px solid var(--admin-line); color: var(--admin-text); cursor: pointer; }
+.spark-admin .admin-main form.border { border: 0; border-top: 1px solid var(--admin-line); border-bottom: 1px solid var(--admin-line); padding: 24px 0; background: transparent; }
+.spark-admin .admin-main :is(a, button).border { border-radius: 6px; }
+.spark-admin .admin-main :is(a, button).bg-zinc-900 { background: #2563eb; border-color: #2563eb; color: #fff; }
+.spark-admin .admin-main :is(a, button).bg-zinc-900:hover { background: #1d4ed8; }
+.spark-admin .admin-main :is(a, button):focus-visible { outline: 2px solid #3b82f6; outline-offset: 3px; }
+.spark-admin .admin-main .overflow-x-auto { background: var(--admin-surface); border-color: var(--admin-line); }
+.spark-admin .admin-main table { background: var(--admin-surface); }
+.spark-admin .admin-main table thead { background: var(--admin-canvas); color: var(--admin-muted); }
+.spark-admin .admin-main table thead th { padding-block: 14px; font-size: 12px; font-weight: 600; }
+.spark-admin .admin-main table tbody { background: var(--admin-surface); }
+.spark-admin .admin-main table tbody tr { transition: background-color .12s; }
+.spark-admin .admin-main table tbody tr:hover { background: var(--admin-canvas); }
+.spark-admin .admin-main table :is(td, th) { vertical-align: middle; }
+.spark-admin .admin-main table td { padding-block: 18px; }
+.spark-admin .admin-main table .text-zinc-500 { color: var(--admin-muted); }
+.admin-welcome { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
+.admin-eyebrow { color: var(--admin-muted); font-size: 13px; margin-bottom: 5px; }
+.admin-year { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--admin-muted); }
+.admin-year strong { display: block; font-size: 18px; color: var(--admin-text); }
+.admin-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.admin-metric { border: 1px solid var(--admin-line); border-radius: 8px; background: var(--admin-surface); padding: 20px; display: grid; grid-template-columns: 1fr 38px; gap: 12px; align-items: start; }
+.admin-metric dt { color: var(--admin-muted); font-size: 13px; line-height: 1.5; min-height: 39px; }
+.admin-metric dd { color: var(--admin-text); font-size: 28px; line-height: 1.2; font-weight: 700; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.admin-metric-icon { grid-column: 2; grid-row: 1 / 3; display: grid; place-items: center; height: 38px; border-radius: 6px; background: #e9f1ff; color: #2455a0; }
+.admin-metric[data-tone=green] .admin-metric-icon { background: #dcf5e8; color: #17643f; }
+.admin-metric[data-tone=amber] .admin-metric-icon { background: #fff0cb; color: #825400; }
+.admin-metric[data-tone=rose] .admin-metric-icon { background: #fbe7eb; color: #a12b46; }
+.dark .admin-metric-icon { background: #2a4162; color: #bcdbff; }
+.dark .admin-metric[data-tone=green] .admin-metric-icon { background: #224635; color: #9fe4c1; }
+.dark .admin-metric[data-tone=amber] .admin-metric-icon { background: #514222; color: #ffdb85; }
+.dark .admin-metric[data-tone=rose] .admin-metric-icon { background: #532e3b; color: #ffc1d1; }
+.admin-ai { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 32px; padding-block: 20px; border-block: 1px solid var(--admin-line); }
+.admin-ai-summary { flex: 1 1 240px; }
+.admin-ai-usage { flex: 0 1 300px; min-width: 220px; }
+.admin-section-title { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 1100px) { .admin-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+    .spark-admin .admin-main { padding: 24px 16px; }
+    .spark-admin .admin-topbar { padding: 12px 16px; gap: 10px; }
+    .admin-breadcrumb > a, .admin-breadcrumb > svg { display: none; }
+    .admin-metrics { gap: 10px; }
+    .admin-metric { padding: 14px; grid-template-columns: 1fr; gap: 10px; }
+    .admin-metric-icon { grid-column: 1; grid-row: 1; width: 32px; height: 32px; }
+    .admin-metric dd { font-size: 24px; }
+    .admin-metric dt { min-height: 58px; overflow-wrap: anywhere; }
+}
+@media (prefers-reduced-motion: reduce) { .spark-admin *, .spark-admin *::before, .spark-admin *::after { transition: none !important; animation: none !important; } }
